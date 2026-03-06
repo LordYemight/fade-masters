@@ -1,19 +1,25 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-body)'],
         heading: ['var(--font-heading)'],
+        sans: ['var(--font-body)'],
       },
       colors: {
-        primary: '#0A0A0A',
-        secondary: '#FFFFFF',
-        accent: '#B8860B',
+        primary: "#121212",
+        secondary: "#A0A0A0",
+        accent: "#FFFFFF",
+      },
+      animation: {
+        marquee: 'marquee 25s linear infinite',
+        glow: 'pulse-glow 2s ease-in-out infinite',
       },
     },
   },
